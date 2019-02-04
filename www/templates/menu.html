@@ -1,0 +1,42 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-positive">
+      <ion-nav-back-button></ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="side-menu21"></ion-nav-view>
+  </ion-side-menu-content>
+  <ion-side-menu side="left" id="side-menu21">
+    <ion-header-bar class="bar-header bar-positive">
+      <div class="title">Menu</div>
+    </ion-header-bar>
+    <ion-content padding="false" class="side-menu-left has-header ">
+      <ion-list id="menu-list1">
+        <ion-item id="menu-list-item1" ui-sref="menu.inicio()" menu-close="">Inicio</ion-item>
+        <ion-item class="item-icon-right" id="menu-list-item2" ui-sref="menu.inscribirme()" menu-close="">Datos personales
+          <i class="icon ion-document-text"></i>
+        </ion-item>
+        <ion-item class="item-icon-right" id="menu-list-item2" ui-sref="menu.educar()" menu-close="">Estudios
+          <i class="icon ion-university"></i>
+        </ion-item>
+        <ion-item class="item-icon-right" id="menu-list-item2" ui-sref="menu.cursos()" menu-close="">Cursos
+          <i class="icon ion-android-clipboard"></i>
+        </ion-item>
+        <ion-item class="item-icon-right" id="menu-list-item2" ui-sref="menu.historia()" menu-close="">Historia Laboral
+          <i class="icon ion-ios-gear"></i>
+        </ion-item>
+         <ion-item class="item-icon-right" id="menu-list-item2" ui-sref="menu.enviar()" menu-close="">Enviar Inscripción
+          <i class="icon ion-android-checkbox"></i>
+        </ion-item>
+        <ion-item class="item-icon-right" id="menu-list-item4" ui-sref="menu.cronograma()" menu-close="">Información
+          <i class="icon ion-calendar"></i>
+        </ion-item>
+        <ion-item class="item-icon-right" id="menu-list-item5" ui-sref="menu.consulta()" menu-close="">Consultas
+          <i class="icon ion-chatbubbles"></i>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

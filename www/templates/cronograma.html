@@ -1,0 +1,26 @@
+<ion-view title="Información" id="page15" cache-view="false" ng-controller="cronogramaCtrl">
+    <ion-content padding="true" class="has-header">
+        <div class="list card">
+            <div class="item item-thumbnail-left">
+                <img src="img/calendario.png">
+                <h2>
+                    <B>Información útil</B>
+                </h2>
+                <a href="http://ceprocor.cba.gov.ar/tecnobecas2017">Bases y Condiciones</a><br>
+                <a href="https://ceprocor.com/tecnobecas/terminos.html">Términos y Condiciones</a>
+            </div>
+
+            <div style="margin:15px">
+                <p>Las Tecnobecas están destinadas a alumnos, sin límite de edad, del último año, de carreras universitarias, preferentemente acreditadas por la Comisión Nacional de Evaluación y Acreditación Universitaria (CONEAU) o terciarias oficiales,
+                    dictadas por instituciones radicadas en la Provincia, y/o a profesionales de hasta un año de egresados de dichas instituciones, considerándose para establecer dicho término la fecha que figura en el diploma que acredita el pertinente
+                    título, otorgado por la institución correspondiente. En caso de no existir aspirantes inscriptos en una determinada área que cumplan con los plazos expresados se podrán exceptuar los mismos.
+                    <ul>
+                        <li ng-repeat="fecha in fechas"><b>{{fecha.fecha}}</b>- {{fecha.linea}}</li><br>
+                    </ul>
+                </p>
+
+            </div>
+        </div>
+        <img src="img/footer.png" width="100%">
+    </ion-content>
+</ion-view>

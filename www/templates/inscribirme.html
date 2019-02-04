@@ -1,0 +1,73 @@
+<ion-view title="Mis datos personales" id="page9">
+    <ion-content padding="true" class="has-header">
+        <div class="list card">
+            <div class="item item-thumbnail-left">
+                <img src="img/datospers.png">
+                <h2>
+                    <B>Datos personales</B>
+                </h2>
+                <p>Completá todos los casilleros con tus datos</p>
+            </div>
+        </div>
+        <form id="inscribirme-form4" class="list" ng-controller="inscribirmeCtrl">
+            <div class="list">
+                <div class="item item-calm">
+                    Unidades a los que se postula:
+                </div>
+                <label class="item item-select" id="inscribirme-select3" name="unidad1">
+        <span class="input-label">Unidad</span>
+        <select ng-model="id_lab1">
+          <option ng-repeat="item in unidades"  value="{{item.cod}}">{{item.descripcion}}</option>
+        </select>
+      </label>
+                <label class="item item-select" id="inscribirme-select4" name="unidad2">
+        <span class="input-label">Unidad</span>
+        <select ng-model="id_lab2">
+            <option ng-repeat="item in unidades" value="{{item.cod}}">{{item.descripcion}}</option>
+        </select>
+      </label>
+                <div class="item item-calm">
+                    Datos personales:
+                </div>
+                <label class="item item-input item-stacked-label" id="inscribirme-input11" name="apellido">
+        <span class="input-label">Apellido y nombre</span>
+        <input type="text" placeholder="" ng-model="apellido">
+      </label>
+                <label class="item item-input" id="inscribirme-input14" name="cuil">
+        <span class="input-label">Cuil</span>
+        <input type="number" placeholder="" ng-model="cuil">
+      </label>
+                <label class="item item-input item-stacked-label" id="inscribirme-input15" name="fecha_nac">
+        <span class="input-label">Fecha de nacimiento</span>
+        <input type="date" displayFormat="DD/MM/YYYY" placeholder="" ng-model="fecha_nac">
+      </label>
+                <label class="item item-input item-stacked-label" id="inscribirme-input16" name="domicilio">
+        <span class="input-label">Domicilio</span>
+        <input type="text" placeholder="" ng-model="domicilio">
+      </label>
+                <label class="item item-input item-stacked-label" id="inscribirme-input17" name="localidad">
+        <span class="input-label">Localidad</span>
+        <input type="text" placeholder="" ng-model="localidad">
+      </label>
+                <label class="item item-input item-stacked-label" id="inscribirme-input18" name="provincia">
+        <span class="input-label">Provincia</span>
+        <input type="text" placeholder="" ng-model="provincia">
+      </label>
+                <label class="item item-input item-stacked-label" id="inscribirme-input19" name="telefono">
+        <span class="input-label">Teléfono</span>
+        <input type="tel" placeholder="" ng-model="telefono">
+      </label>
+                <label class="item item-input item-stacked-label" id="inscribirme-input20" name="email">
+        <span class="input-label">Email</span>
+        <input type="email" placeholder="" ng-model="email">
+      </label>
+                <div id="inscribirme-container1">
+                    <form id="inscribirme-form5" class="list">
+                        <button id="inscribirme-button6" class="button button-positive button-block" ng-click="GrabarDatos()">Guardar Datos</button>
+                    </form>
+                </div>
+            </div>
+        </form>
+        <img src="img/footer.png" width="100%">
+    </ion-content>
+</ion-view>

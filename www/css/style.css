@@ -1,0 +1,19 @@
+/* Empty. Add your own CSS if you like */
+
+.logoCepro {
+    background-image: url('../img/Bienvenidos.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center; */
+    /* width: 100%; */
+}
+
+.center {
+    margin: auto;
+    padding-top: 130%;
+    /* width: 65%; */
+}
+
+.boton {
+    background-color: #ffa500;
+}

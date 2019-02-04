@@ -1,0 +1,17 @@
+[{ "cod": "UEM", "descripcion": "Espectrometría Molecular" },
+    { "cod": "UES", "descripcion": "Espectroscopia" },
+    { "cod": "UEF", "descripcion": "Estudios Físicos" },
+    { "cod": "USA", "descripcion": "Separaciones Analíticas" },
+    { "cod": "PMED", "descripcion": "Medicamentos" },
+    { "cod": "PAGRO", "descripcion": "Agroquímicos" },
+    { "cod": "PAL", "descripcion": "Alimentos" },
+    { "cod": "PAG", "descripcion": "Aguas" },
+    { "cod": "UTQ", "descripcion": "Tecnología Química" },
+    { "cod": "PAUP", "descripcion": "Auditoría de Procesos" },
+    { "cod": "SIT", "descripcion": "Sistemas Informáticos" },
+    { "cod": "GCT", "descripcion": "Calidad" },
+    { "cod": "RFIT", "descripcion": "Recursos Fitogenéticos" },
+    { "cod": "PBM", "descripcion": "Biología Molecular" },
+    { "cod": "MICRO", "descripcion": "Microbiología" },
+    { "cod": "PBIO", "descripcion": "Biociencias" }
+]

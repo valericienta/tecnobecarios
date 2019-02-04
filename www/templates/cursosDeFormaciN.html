@@ -1,0 +1,87 @@
+<ion-view title="Cursos de formación" id="page12">
+  <!--curso, centro, idioma, evaluacion, anio, duracion, foto-->
+  <ion-content padding="true" class="has-header" ng-controller="cursosDeFormaciNCtrl">
+    <div class="list card">
+      <div class="item item-thumbnail-left">
+        <img src="img/curso.png">
+        <h2>
+          <B>Cursos</B>
+        </h2>
+        <p>Completá todos los campos y click en Agregar</p>
+      </div>
+    </div>
+    <form id="cursosDeFormaciN-form11" class="list">
+      <div class="list">
+        <div class="item item-calm">
+          Cursos de formación:
+        </div>
+        <div id="cursosDeFormaciN-container4">
+          <form id="cursosDeFormaciN-form10" class="list">
+            <label class="item item-input item-stacked-label" id="cursosDeFormaciN-input35" name="titulo_curso">
+              <span class="input-label">Título del curso</span>
+              <input type="text" placeholder="" ng-model="curso">
+            </label>
+            <label class="item item-input item-stacked-label" id="cursosDeFormaciN-input37" name="centro">
+              <span class="input-label">Centro de formación</span>
+              <input type="text" placeholder="" ng-model="centro">
+            </label>
+            <ul class="listevalua">
+              <li class="item item-toggle">
+                Tuvo evaluación?
+                <label class="toggle toggle-calm">
+                  <input type="checkbox" ng-model="evaluacion">
+                  <div class="track">
+                    <div class="handle"></div>
+                  </div>
+                </label>
+              </li>
+            </ul>
+            <label class="item item-input item-stacked-label" id="cursosDeFormaciN-input38" name="anio">
+              <span class="input-label">Año</span>
+              <input type="number" placeholder="" ng-model="anio">
+            </label>
+            <label class="item item-input item-stacked-label" id="cursosDeFormaciN-input39" name="horas">
+              <span class="input-label">Horas de duración</span>
+              <input type="number" placeholder="" ng-model="duracion">
+            </label>
+            <ul class="list">
+              <li class="item item-toggle">
+                Es curso de idioma?
+                <label class="toggle toggle-calm">
+                  <input type="checkbox" ng-model="idioma">
+                  <div class="track">
+                    <div class="handle"></div>
+                  </div>
+                </label>
+              </li>
+            </ul>
+            <img ng-src="{{imgURI}}" id="imagenCert" style="width:95%; height:auto">
+            <button id="educaciN-button7" class="button button-positive button-block icon-left ion-camera" ng-click="takePicture()">Toma foto del certificado</button>
+
+            <button id="educaciN-button8" class="button button-positive button-block" ng-click="guardarCurso()">Guardar Curso</button>
+
+            <div class="item item-calm">
+              Cursos cargados:
+            </div>
+            <div ng-repeat="item in listado">
+              <div class="list">
+
+                <div class="item item-thumbnail-left">
+                  <img src="{{item.foto}}" style="width:50px;height:auto">
+                  <h2>{{item.curso}}</h2>
+                  <p>{{item.centro}}</p>
+                  <p>{{item.duracion}} hs | Año: {{anio}}</p>
+                  <p>Con Evaluación: {{item.evaluacion}}</p>
+                  <p>Es idioma: {{item.idioma}}</p>
+                  <img src="img/boton-x.png" align="right" ng-click="eliminarCurso({{item.nro_orden}})">
+                </div>
+
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </form>
+    <img src="img/footer.png" width="100%">
+  </ion-content>
+</ion-view>

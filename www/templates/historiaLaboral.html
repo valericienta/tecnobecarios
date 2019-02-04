@@ -1,0 +1,55 @@
+<ion-view title="Historia laboral" id="page13" cache-view="false">
+  <ion-content padding="true" class="has-header">
+      <div class="list card">  
+          <div class="item item-thumbnail-left" >
+            <img src="img/historia.png">
+            <h2><B>Experiencia Laboral</B></h2>
+            <p>Completá todos los campos con tu experiencia laboral</p>
+          </div>
+        </div>
+    <form id="historiaLaboral-form13" class="list" ng-controller="historiaLaboralCtrl">
+        <div class="list">
+            <div class="item item-calm">
+              Historia laboral:
+            </div>
+
+      <label class="item item-input item-stacked-label" id="historiaLaboral-input40" name="institucion">
+        <span class="input-label">Institución</span>
+        <input type="text" placeholder="" ng-model="lugar">
+      </label>
+      <label class="item item-input item-stacked-label" id="historiaLaboral-input41" name="actividad">
+        <span class="input-label">Actividad desarrollada</span>
+        <input type="text" placeholder="" ng-model="actividad">
+      </label>
+      <label class="item item-input item-stacked-label" id="historiaLaboral-input43" name="periodo">
+        <span class="input-label">Período de empleo</span>
+        <input type="text" placeholder="" ng-model="periodo">
+      </label>
+      <label class="item item-input item-stacked-label" id="historiaLaboral-input46" name="telefono">
+        <span class="input-label">Teléfono de contacto</span>
+        <input type="tel" placeholder="" ng-model="telefono">
+      </label>
+      <div id="historiaLaboral-container5">
+        <form id="historiaLaboral-form12" class="list">
+          <button id="historiaLaboral-button13" class="button button-positive button-block" ng-click="agregarHistoriaLaboral()">Agregar</button>
+        </form>
+      </div>
+      <div class="item item-calm">
+          Experiencia cargada:
+        </div>
+      <div ng-repeat="item in listado">
+        <div class="list">
+          <div class="item item-thumbnail-left">
+            <h2>{{item.lugar}}</h2>
+            <p>{{item.actividad}}</p>
+            <p>{{item.periodo}}</p>
+            <p>{{item.telefono}}</p>
+            <img src="img/boton-x.png" align="right" ng-click="eliminarHistoriaLaboral({{item.nro_orden}})">
+          </div>
+        </div>
+      </div>
+      </div>
+    </form>
+    <img src="img/footer.png" width="100%">
+  </ion-content>
+</ion-view>

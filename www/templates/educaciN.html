@@ -1,0 +1,62 @@
+<ion-view title="Educación" id="page10" cache-view="false">
+  <ion-content padding="true" class="has-header">
+      <div class="list card">  
+          <div class="item item-thumbnail-left" >
+            <img src="img/estudios.png">
+            <h2><B>Educación</B></h2>
+            <p>Completa todos los campos con los estudios concluídos o en curso</p>
+          </div>
+        </div>
+    <form id="educaciN-form7" class="list" ng-controller="educaciNCtrl">
+        <div class="list">
+            <div class="item item-calm">
+              Educación (estudios concluídos):
+            </div>
+      <div id="educaciN-container2">
+        <form id="educaciN-form6" class="list">
+          <label class="item item-select" id="educaciN-select8" name="tipo_estudio">
+            <span class="input-label">Tipo de estudio</span>
+            <select ng-model="tipo_educacion">
+              <option value="Secundario">Secundario</option>
+              <option value="Terciario">Terciario</option>
+              <option value="Universitario">Universitario</option>
+              <option value="Maestría">Maestría</option>
+              <option value="Especialización">Especialización</option>
+              <option value="Doctorado">Doctorado</option>
+            </select>
+          </label>
+          <label class="item item-input item-stacked-label" id="educaciN-input31" name="centro">
+            <span class="input-label">Centro de formación</span>
+            <input type="text" placeholder="" ng-model="centro">
+          </label>
+          <label class="item item-input item-stacked-label" id="educaciN-input32" name="titulo">
+            <span class="input-label">Título</span>
+            <input type="text" placeholder="" ng-model="titulo">
+          </label>
+
+          <div class="item item-calm">
+              Estudios cargados:
+            </div>
+         
+
+          <img ng-src="{{imgURI}}" id="imagenCert" style="width:95%; height:auto">
+          <button id="educaciN-button7" class="button button-positive button-block icon-left ion-camera" ng-click="takePicture()">Toma foto del certificado</button>
+
+          <button id="educaciN-button8" class="button button-positive button-block" ng-click="agregarEducacion()">Agregar Estudio</button>
+          <div ng-repeat="item in listado">
+            <div class="list">
+              <div class="item item-thumbnail-left">
+                <img src="{{item.foto}}" style="width:50px;height:auto">
+                <h2>{{item.titulo}}</h2>
+                <p>{{item.tipo_educacion}}</p>
+                <img src="img/boton-x.png" align="right" ng-click="eliminarEducacion({{item.nro_orden}})">
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    </form>
+    <img src="img/footer.png" width="100%">
+  </ion-content>
+</ion-view>

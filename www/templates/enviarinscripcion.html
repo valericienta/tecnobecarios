@@ -1,0 +1,116 @@
+<ion-view title="Enviar Inscripcion" id="page14" cache-view="false" ng-controller="enviarInscripcionCtrl">
+    <ion-content padding="true" class="has-header">
+        <div class="list card">
+            <div class="item item-avatar">
+                <img src="img/enviar.png">
+                <h2>
+                    <B>ENVIAR INSCRIPCIÓN</B>
+                </h2>
+                <p>Paso final, envianos tu inscripción.</p>
+                <p>Los datos no podrán editarse.</p>
+            </div>
+        </div>
+        <div class="list">
+            <div class="item item-calm">
+                Datos Personales
+            </div>
+
+            <label class="item item-input" id="inscribirme-input11" name="apellido">
+                <span class="input-label">Apellido</span>
+                <input type="text" placeholder="" ng-model="apellido" readonly>
+            </label>
+            <label class="item item-input" id="inscribirme-input14" name="cuil">
+                <span class="input-label">Cuil</span>
+                <input type="number" placeholder="" ng-model="cuil" readonly>
+            </label>
+            <label class="item item-input" id="inscribirme-input15" name="fecha_nac">
+                <span class="input-label">Fecha Nac.</span>
+                <input type="date" displayFormat="DD/MM/YYYY" placeholder="" ng-model="fecha_nac" readonly>
+            </label>
+            <label class="item item-input" id="inscribirme-input16" name="domicilio">
+                <span class="input-label">Domicilio</span>
+                <input type="text" placeholder="" ng-model="domicilio" readonly>
+            </label>
+            <label class="item item-input" id="inscribirme-input17" name="localidad">
+                <span class="input-label">Localidad</span>
+                <input type="text" placeholder="" ng-model="localidad" readonly>
+            </label>
+            <label class="item item-input" id="inscribirme-input18" name="provincia">
+                <span class="input-label">Provincia</span>
+                <input type="text" placeholder="" ng-model="provincia" readonly>
+            </label>
+            <label class="item item-input" id="inscribirme-input19" name="telefono">
+                <span class="input-label">Teléfono</span>
+                <input type="tel" placeholder="" ng-model="telefono" readonly>
+            </label>
+            <label class="item item-input" id="inscribirme-input20" name="email">
+                <span class="input-label">Email</span>
+                <input type="email" placeholder="" ng-model="email" readonly>
+            </label>
+            <div class="item item-calm">
+                Estudios
+            </div>
+            <div ng-repeat="item in listadoEducacion">
+                <div class="list">
+                    <div class="item item-thumbnail-left">
+                        <p>{{item.tipo_estudio}}</p>
+                        <h2>{{item.centro}}</h2>
+                        <h2>{{item.titulo}}</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item item-calm">
+                Cursos de formación
+            </div>
+            <div ng-repeat="item in listadoCursos">
+                <div class="list">
+
+                    <div class="item item-thumbnail-left">
+                        <h2>{{item.curso}}</h2>
+                        <p>{{item.centro}}</p>
+                        <p>{{item.duracion}} hs | Año: {{anio}}</p>
+                        <p>Con Evaluación: {{item.evaluacion}}</p>
+                        <p>Es idioma: {{item.idioma}}</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="item item-calm">
+                Historia Laboral
+            </div>
+            <div ng-repeat="item in listadoLaboral">
+                <div class="list">
+                    <div class="item item-thumbnail-left">
+                        <h2>{{item.lugar}}</h2>
+                        <p>{{item.actividad}}</p>
+                        <p>{{item.periodo}}</p>
+                        <p>{{item.telefono}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3>DECLARO BAJO JURAMENTO</h3>
+        <br/>
+        <form id="educaciN-form7" class="list" ng-controller="enviarInscripcionCtrl">
+
+            <ion-checkbox ng-model="acepta">Acepto las condiciones de la convocatoria</ion-checkbox>
+
+            <br/> 1) La veracidad y exactitud de la totalidad de los datos consignados.
+            <br/> 2) Poseer la documentación que respalda la totalidad de la información vertida en el presente Formulario, la
+            que deberá ser presentada a requerimiento de la Comisión.
+            <br/> 3) Vínculos (relaciones personales, parentesco por consaguineidad o afinidad) con personal de CEPROCOR.
+            <br/>
+            <br/>
+            <label class="item item-input" id="inscribirme-input11" name="pariente">
+                <span class="input-label">Poseo (detallar)</span>
+                <input type="text" placeholder="" ng-model="pariente">
+            </label>
+
+            <button id="crono-button7" class="button button-positive button-block" ng-click="enviar()">Enviar Datos</button>
+        </form>
+        <img src="img/footer.png" width="100%">
+    </ion-content>
+</ion-view>

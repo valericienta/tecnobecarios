@@ -1,0 +1,33 @@
+<ion-view title="Consulta" id="page16" cache-view="false" ng-controller="consultaCtrl">
+  <ion-content padding="true" class="has-header">
+    <div class="list card">
+      <div class="item item-thumbnail-left">
+        <img src="img/Chat-icon.png">
+        <h2>
+          <B>Enviános tus dudas</B>
+        </h2>
+        <p>Responderemos a la brevedad</p>
+
+      </div>
+    </div>
+    <form id="consulta-form14" class="list" ng-controller="consultaCtrl">
+      <label class="item item-input item-stacked-label" id="consulta-input50" name="email">
+        <span class="input-label">Email de contacto</span>
+        <input type="text" placeholder="" ng-model="mail_contacto" readonly>
+      </label>
+      <label class="item item-input item-stacked-label" id="consulta-input51" name="consulta">
+        <span class="input-label">Consulta</span>
+        <textarea placeholder="Escriba su consulta" rows="8" cols="10" ng-model="cuerpo">
+        </textarea>
+      </label>
+      <button id="consulta-button15" class="button button-positive button-block" ng-click="enviar()">Enviar</button>
+      <ion-icon name="heart"></ion-icon>
+    </form>
+    <img src="img/footer.png" width="100%">
+
+
+  </ion-content>
+
+
+
+</ion-view>
