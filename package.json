@@ -1,7 +1,7 @@
 {
-    "name": "tecnos2018",
+    "name": "tecnobecarios",
     "version": "1.1.1",
-    "description": "Tecnos2018: An Ionic project",
+    "description": "Tecnobecarios: An Ionic project",
     "devDependencies": {
         "@ionic/v1-toolkit": "1.0.10"
     },
